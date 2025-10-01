@@ -1,5 +1,6 @@
 from school_schedule.student import Student
 from school_schedule.high_school_student import HighSchoolStudent
+from school_schedule.middle_school_student import MiddleSchoolStudent
 
 # first instance
 quinn = Student(
@@ -33,6 +34,20 @@ claire = HighSchoolStudent(
                 clubs=["Algorithms Club"]
             )
 
-students = [quinn, claire]
+# third instance
+kate = MiddleSchoolStudent(
+                "Kate", 
+                "4th grade", 
+                [
+                    "Music", 
+                    "Writing", 
+                    "Contemporary Issues", 
+                    "Gym", 
+                    "Painting"
+                ],
+               gets_transportation=True
+            )
+
+students = [quinn, claire, kate]
 for student in students:
     print(student.summary())
